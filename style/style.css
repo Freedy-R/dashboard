@@ -61,10 +61,11 @@ ul, li, a{
     gap: 2rem;
     margin-bottom: auto;
 }
-.dashboard_profile > li{
+.dashboard_profile li{
     width: 100%;
     display: grid;
     place-content: center;
+    transition: 2s ease;
 }
 .dashboard_profile_element{
     position: relative;
@@ -73,6 +74,10 @@ ul, li, a{
     gap: 0.2rem;
 }
 .dashboard_profile_element img::before{
+    height: 44px;
+    width: 44px;
+}
+.dashboard_profile_element img:hover::before{
     content: "";
     display: flex;
     margin-left: auto;
@@ -80,10 +85,12 @@ ul, li, a{
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    height: 44px;
-    width: 44px;
-    opacity: 40%;
-    background-color: rgb(4, 255, 83);
+    opacity: 100%;
+    background-color: #efeff1;
+    transition: 2s ease;
+}
+.dashboard_profile_element .profile::before {
+ background-color: red;
 }
 .dashboard_sections{
     display: grid;
