@@ -21,19 +21,13 @@
   --DashboardSection_nav--link_colour: rgb(34, 33, 33);
 }
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
   width: 100vw;
   height: 100vh;
-  background: rgb(92, 175, 53);
   background: var(--bg-gradient);
 }
 
-main {
-  display: grid;
-  place-items: center;
-  height: 100%;
-}
 .dashboard {
   --padding: 1rem 0rem 1rem 0rem;
   position: relative;
@@ -88,25 +82,7 @@ a {
 img {
   width: 80%;
 }
-.dashboard_profile_element img::before {
-  height: 44px;
-  width: 44px;
-}
-.dashboard_profile_element img:hover::before {
-  content: "";
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  opacity: 100%;
-  background-color: #efeff1;
-  transition: 2s ease;
-}
-.dashboard_profile_element .profile::before {
-  background-color: red;
-}
+
 .dashboard_sections {
   display: grid;
   grid-template-rows: auto 1fr;
