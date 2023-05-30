@@ -14,6 +14,11 @@
     rgba(112, 222, 117, 1) 66%,
     rgba(140, 205, 142, 1) 90%
   );
+  --bgDarker: var(--bgDashboardSection_nav);
+  --bgDashboardSection_nav: rgb(243, 245, 245);
+  --bgDashboardSection_nav--shadow: 0px 10px 10px rgb(223, 219, 219);
+  --bgDashboardButton_colour: rgb(230, 225, 225);
+  --DashboardSection_nav--link_colour: rgb(34, 33, 33);
 }
 body {
   display: flex;
@@ -24,79 +29,119 @@ body {
   background: var(--bg-gradient);
 }
 
-main{
-    display: grid;
-    place-items: center;
-    height: 100%;
+main {
+  display: grid;
+  place-items: center;
+  height: 100%;
 }
-.dashboard{
-    --padding: 1rem 0rem 1rem 0rem;
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 5px;
-    border-radius: 20px;
-    width: 1280px;
-    height: 720px;
-    background-color: #ffffff;
- 
+.dashboard {
+  --padding: 1rem 0rem 1rem 0rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  gap: 5px;
+  border-radius: 20px;
+  width: 1280px;
+  height: 720px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-.dashboard_profile{
-    display: flex;
-    text-align: center;
-    overflow: hidden;
-    flex-direction: column;
-    height: 100%;
-    padding: var(--padding);
+.dashboard_profile {
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--padding);
+  background-color: var(red);
 }
 
-ul, li, a{
-    text-decoration: none;
-    list-style: none;
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
 }
+
 .dashboard_profile > ul {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    gap: 2rem;
-    margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 2rem;
+  margin-bottom: auto;
 }
-.dashboard_profile li{
-    width: 100%;
-    display: grid;
-    place-content: center;
-    transition: 2s ease;
+.dashboard_profile li {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  transition: 2s ease;
 }
-.dashboard_profile_element{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+.dashboard_profile_element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.2rem;
 }
-.dashboard_profile_element img::before{
-    height: 44px;
-    width: 44px;
+img {
+  width: 80%;
 }
-.dashboard_profile_element img:hover::before{
-    content: "";
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    opacity: 100%;
-    background-color: #efeff1;
-    transition: 2s ease;
+.dashboard_profile_element img::before {
+  height: 44px;
+  width: 44px;
+}
+.dashboard_profile_element img:hover::before {
+  content: "";
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  opacity: 100%;
+  background-color: #efeff1;
+  transition: 2s ease;
 }
 .dashboard_profile_element .profile::before {
- background-color: red;
+  background-color: red;
 }
-.dashboard_sections{
-    display: grid;
-    grid-template-rows: auto 1fr;
+.dashboard_sections {
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
-.dashboard_section_nav{
-    background-color: aqua;
+.dashboard_section_nav {
+  display: flex;
+  height: 60px;
+  background-color: var(--bgDashboardSection_nav);
+  box-shadow: var(--bgDashboardSection_nav--shadow);
+  border-radius: 10px;
+}
+.dashboard_section_nav :is(ul) {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.dashboard_section_nav :is(a) {
+  color: var(--DashboardSection_nav--link_colour);
+  font-size: 1.2rem;
+  transition: 1s ease;
+}
+
+.dashboard_section_nav :is(a):hover {
+  font-size: 1.3rem;
+}
+
+.btnBack {
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  border-radius: 80%;
+  color: black;
+  background-color: var(--bgDashboardButton_colour);
+  border: none;
 }
