@@ -53,6 +53,22 @@
     grid-template-rows: 2fr 2fr 1fr;
   }
   .dashboard_sections_view--element{
+    position: relative;
+    display: grid;
     background-color: white;
     border-radius: 10px;
+    padding: 1rem;
+    grid-template-columns: repeat(2,1fr);
    }
+   .dashboard_sections_view--element > select{
+    height: 30px;
+    width: fit-content;
+    background-color: #f0f0f2;
+    border-radius: 10px;
+    padding: 5px;
+   }
+   .customerVisit{
+    position: relative;
+    grid-column: 1/-1;
+   }
+

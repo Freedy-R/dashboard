@@ -20,23 +20,25 @@
   --bgDashboardButton_colour: rgb(230, 225, 225);
   --DashboardSection_nav--link_colour: rgb(34, 33, 33);
 }
-#root {
+
+body {
   display: grid;
   place-items: center;
   width: 100vw;
   height: 100vh;
   background: var(--bg-gradient);
+  padding: 10px;
 }
 
 .dashboard {
   --padding: 1rem 0rem 1rem 0rem;
   position: relative;
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 20% 80%;
   gap: 5px;
+  min-width: fit-content;
+  height: fit-content;
   border-radius: 20px;
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
   background-color: #ffffff;
   overflow: hidden;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
@@ -49,9 +51,9 @@ a {
   list-style: none;
 }
 img {
-  width: 80%;
+  width: 64px;
 }
-button{
+button,select,input{
   border: none;
   background-color: transparent;
   font-size: 1rem;
