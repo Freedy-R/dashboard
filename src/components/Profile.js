@@ -1,5 +1,6 @@
 import ProfileSections from "./elements/ProfileSections";
 import logo from "../assets/logo.png"
+import "../style/profile.css"
 const Profile = () => {
     return (
         <>

@@ -1,3 +1,9 @@
+:root{
+  --bgDashboardSection_nav: #ffffff;
+  --bgDashboardSection_nav--shadow: 0px 10px 10px rgb(223, 219, 219);
+  --bgSectionButton_colour: rgb(230, 225, 225);
+
+}
 .dashboard_sections {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -7,8 +13,6 @@
     display: flex;
     height: 60px;
     background-color: var(--bgDashboardSection_nav);
-    box-shadow: var(--bgDashboardSection_nav--shadow);
-    border-radius: 10px;
   }
   .dashboard_section_nav :is(ul) {
     display: flex;
@@ -16,11 +20,6 @@
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-  }
-  .dashboard_section_nav :is(a) {
-    color: var(--DashboardSection_nav--link_colour);
-    font-size: 1.2rem;
-    transition: 1s ease;
   }
   
   .dashboard_section_nav :is(a):hover {
@@ -33,7 +32,7 @@
     margin: 3px;
     border-radius: 80%;
     color: black;
-    background-color: var(--bgDashboardButton_colour);
+    background-color: var(--bgSectionButton_colour);
     border: none;
   }
 
