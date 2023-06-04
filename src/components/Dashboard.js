@@ -7,7 +7,7 @@ const Dashboard = () => {
             <section className="dashboard">
                 <Profile />
                 <Sections />
-            </section>
+            </section >
         </>
     );
 }

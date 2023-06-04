@@ -1,18 +1,20 @@
 import ProfileSections from "./elements/ProfileSections";
+import logo from "../assets/logo.png"
 const Profile = () => {
     return (
         <>
             <section className="dashboard_profile">
                 <figure>
-                    <img src="" alt="logo" />
-                    <figcaption>Company</figcaption>
+                    <img src={logo} alt="logo" />
+                    <figcaption>Green Delights</figcaption>
                 </figure>
-                <ProfileSections/>
+                <ProfileSections />
                 <section>
                     <figure className="dashboard_profile_element">
                         <img alt="profile" className="profile" />
                         <figcaption>Name of profile</figcaption>
                     </figure>
+                    
                 </section>
             </section>
         </>

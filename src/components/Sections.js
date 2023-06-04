@@ -15,7 +15,7 @@ const Sections = () => {
         <>
             <section className="dashboard_sections">
                 <section className="dashboard_section_nav">
-                    <label for="btnBack">
+                    <label htmlFor="btnBack">
                         <input className="btnBack" type="button" id="btnBack" value="<" />
                         Back
                     </label>
@@ -31,7 +31,9 @@ const Sections = () => {
                         </ul>
                     </ul>
                 </section>
-                <section class="dashboard_sections_view"></section>
+                <section className="dashboard_sections_view">
+                <path d="M0,100 Q50,150 100,100 T200,100 V200 H0 Z" fill="#FF0000" />
+                </section>
             </section>
         </>
     )
