@@ -10,7 +10,7 @@ const Profile = () => {
                 <ProfileSections/>
                 <section>
                     <figure className="dashboard_profile_element">
-                        <img alt="profile" class="profile" />
+                        <img alt="profile" className="profile" />
                         <figcaption>Name of profile</figcaption>
                     </figure>
                 </section>
