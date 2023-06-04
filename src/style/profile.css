@@ -1,0 +1,29 @@
+.dashboard_profile {
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--padding);
+    background-color: var(red);
+  }
+  .dashboard_profile > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 2rem;
+    margin-bottom: auto;
+  }
+  .dashboard_profile li {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    transition: 2s ease;
+  }
+  .dashboard_profile_element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.2rem;
+  }

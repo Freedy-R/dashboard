@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../style/sections.css"
 const Sections = () => {
     const [listState, setListState] = useState({
         elements: [

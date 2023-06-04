@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../style/profile.css"
 
 const ProfileSections = () => {
   const [state, setState] = useState({

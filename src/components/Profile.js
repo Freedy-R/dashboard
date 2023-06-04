@@ -1,4 +1,4 @@
-import ProfileSections from "./ProfileSections";
+import ProfileSections from "./elements/ProfileSections";
 const Profile = () => {
     return (
         <>

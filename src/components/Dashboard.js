@@ -1,6 +1,6 @@
 import '../style/style.css'
-import Profile from './elements/Profile'
-import Sections from './elements/Sections';
+import Profile from './Profile'
+import Sections from './Sections';
 const Dashboard = () => {
     return (
         <>
