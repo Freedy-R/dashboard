@@ -15,6 +15,26 @@ const SectionsView = () => {
                         <LineChart></LineChart>
                     </div>
                     <div className="dashboard_sections_view--element">
+                        <table className="customer_table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Total Sale</th>
+                                    <th>Remaining Item</th>
+                                    <th>Hire date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>CEO</td>
+                                    <td>100K</td>
+                                    <td>20K</td>
+                                    <td>02.05.2022</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div className="dashboard_sections_view--element"></div>
                 </div>
