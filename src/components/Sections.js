@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/sections.css"
+import SectionsView from "./elements/SectionsView";
 const Sections = () => {
     const [listState, setListState] = useState({
         elements: [
@@ -31,9 +32,7 @@ const Sections = () => {
                         </ul>
                     </ul>
                 </section>
-                <section className="dashboard_sections_view">
-                <path d="M0,100 Q50,150 100,100 T200,100 V200 H0 Z" fill="#FF0000" />
-                </section>
+                <SectionsView></SectionsView>
             </section>
         </>
     )

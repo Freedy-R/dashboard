@@ -36,3 +36,23 @@
     background-color: var(--bgDashboardButton_colour);
     border: none;
   }
+
+  .dashboard_sections_view{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #f0f0f2;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .dashboard_sections_view--left,.dashboard_sections_view--right{
+    display: grid;
+    gap: 1rem;
+  }
+  .dashboard_sections_view--left{
+    grid-template-rows: 2fr 2fr 1fr;
+  }
+  .dashboard_sections_view--element{
+    background-color: white;
+    border-radius: 10px;
+   }
