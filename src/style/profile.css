@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     margin-top: auto;
-    gap: 2rem;
     margin-bottom: auto;
+    gap: 2rem;
   }
   .dashboard_profile li {
     width: 100%;

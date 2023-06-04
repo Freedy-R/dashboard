@@ -78,3 +78,23 @@
     grid-column: 1/-1;
    }
 
+   .customers_table{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr repeat(4,1fr);
+    padding: 0.7rem;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+   }
+   .customers_table > figure {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+   }
+   .customers_table > figure > img{
+    min-width: 32px;
+    max-width: 100%;
+    border-radius: 80%;
+   }
