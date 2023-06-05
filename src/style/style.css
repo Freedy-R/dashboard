@@ -17,18 +17,11 @@
   --bgDarker: var(red);
   --bgDashboardButton_colour: rgb(230, 225, 225);
 }
-
 body {
   width: 100vw;
   height: 100vh;
   background: var(--bg-gradient);
   padding: 15px;
-}
-#root{
-  display: flex;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
 }
 .dashboard {
   --padding: 1rem 0rem 1rem 0rem;
@@ -36,8 +29,6 @@ body {
   display: grid;
   grid-template-columns: 20% 80%;
   gap: 5px;
-  min-width: fit-content;
-  height: fit-content;
   border-radius: 20px;
   background-color: #ffffff;
   overflow: hidden;
@@ -62,6 +53,9 @@ button,select,input{
 button:hover{
   font-size: 1.2rem;
 }
-
-
+@media (max-width: 900px) {
+  .dashboard{
+    grid-template-columns: 1fr;
+  }
+}
 
