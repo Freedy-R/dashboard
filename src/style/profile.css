@@ -1,6 +1,6 @@
 .dashboard_profile {
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: min-content 1fr min-content;
     text-align: center;
     overflow: hidden;
     height: 100%;
@@ -26,11 +26,12 @@
     flex-direction: column;
     gap: 0.2rem;
   }
-  .dashboard_profile_element > figure {
-    
-  }
   @media (max-width: 900px) {
     .dashboard_profile {
       display: none;
     }
+  }
+  .dashboard_profile_element:nth-child(3){
+    display: flex;
+    margin-top: auto;
   }
