@@ -1,4 +1,4 @@
-import LineChart from "./AllCharts";
+import {LineChart,CustomersDevices} from "./AllCharts";
 import profile from "../../assets/rating.png"
 
 const SectionsView = () => {
@@ -38,7 +38,10 @@ const SectionsView = () => {
                     <div className="dashboard_sections_view--element"></div>
                 </div>
                 <div className="dashboard_sections_view--right">
-                    <div className="dashboard_sections_view--element"></div>
+                    <div className="dashboard_sections_view--element">
+                        <h3>Customers time on devices</h3>
+                        <CustomersDevices></CustomersDevices>
+                    </div>
                     <div className="dashboard_sections_view--element"></div>
                 </div>
             </section>
