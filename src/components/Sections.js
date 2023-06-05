@@ -16,10 +16,7 @@ const Sections = () => {
         <>
             <section className="dashboard_sections">
                 <section className="dashboard_section_nav">
-                    <label htmlFor="btnBack">
-                        <input className="btnBack" type="button" id="btnBack" value="<" />
-                        Back
-                    </label>
+                    
                     <ul>
                         <ul>
                             {listState.elements.map((element) => (

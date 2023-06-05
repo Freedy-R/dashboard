@@ -1,100 +1,109 @@
-:root{
+:root {
   --bgDashboardSection_nav: #ffffff;
   --bgDashboardSection_nav--shadow: 0px 10px 10px rgb(223, 219, 219);
   --bgSectionButton_colour: rgb(230, 225, 225);
-
 }
 .dashboard_sections {
-    display: grid;
-    grid-template-rows: auto 1fr;
-  }
-  
-  .dashboard_section_nav {
-    display: flex;
-    height: 60px;
-    background-color: var(--bgDashboardSection_nav);
-  }
-  .dashboard_section_nav :is(ul) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-  
-  .dashboard_section_nav :is(a):hover {
-    font-size: 1.3rem;
-  }
-  
-  .btnBack {
-    width: 32px;
-    height: 32px;
-    margin: 3px;
-    border-radius: 80%;
-    color: black;
-    background-color: var(--bgSectionButton_colour);
-    border: none;
-  }
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
 
-  .dashboard_sections_view{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    background-color: #f0f0f2;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-  .dashboard_sections_view--left,.dashboard_sections_view--right{
-    display: grid;
-    gap: 1rem;
-  }
-  .dashboard_sections_view--left{
-    grid-template-rows: 2fr 2fr 1fr;
-  }
-  .dashboard_sections_view--element{
-    position: relative;
-    background-color: white;
-    border-radius: 10px;
-    padding: 1rem;
-   }
+.dashboard_section_nav {
+  display: flex;
+  height: 60px;
+  background-color: var(--bgDashboardSection_nav);
+}
+.dashboard_section_nav :is(ul) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
 
-   .dashboard_sections_view--left > .dashboard_sections_view--element:first-child{
-    display: grid;
-    background-color: white;
-    grid-template-columns: repeat(2,1fr);
-   }
+.dashboard_section_nav :is(a):hover {
+  font-size: 1.3rem;
+}
 
-   .dashboard_sections_view--left > .dashboard_sections_view--element:first-child > select{
-    height: 30px;
-    width: fit-content;
-    background-color: #f0f0f2;
-    border-radius: 10px;
-    padding: 5px;
-    margin-left: auto;
-   }
-   .customerVisit{
-    position: relative;
-    grid-column: 1/-1;
-   }
+.btnBack {
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  border-radius: 80%;
+  color: black;
+  background-color: var(--bgSectionButton_colour);
+  border: none;
+}
 
-   .customers_table{
-    position: relative;
-    display: grid;
-    grid-template-columns: 2fr repeat(4,1fr);
-    padding: 0.7rem;
-    width: 100%;
-    height: fit-content;
-    gap: 10px;
-   }
-   .customers_table > figure {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-   }
-   .customers_table > figure > img{
-    min-width: 32px;
-    max-width: 100%;
-    border-radius: 80%;
-   }
+.dashboard_sections_view {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #f0f0f2;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.dashboard_sections_view--left,
+.dashboard_sections_view--right {
+  display: grid;
+  gap: 1rem;
+}
+.dashboard_sections_view--left {
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr 1fr;
+}
+.dashboard_sections_view--element {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dashboard_sections_view--left > .dashboard_sections_view--element:first-child {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dashboard_sections_view--left
+  > .dashboard_sections_view--element:first-child
+  > select {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  background-color: #f0f0f2;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: auto;
+}
+.customerVisit {
+  position: relative;
+  grid-column: 1/-1;
+}
+.customers_table {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  padding: 0.7rem;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+}
+.customers_table > figure {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+.customers_table > figure > img {
+  min-width: 32px;
+  max-width: 100%;
+  border-radius: 80%;
+}
+@media (max-width: 900px) {
+  .dashboard_sections_view {
+    grid-template-columns: 1fr;
+  }
+}
