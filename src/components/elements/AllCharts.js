@@ -1,8 +1,9 @@
-import { Chart as ChartJS, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js"
-import { Line } from "react-chartjs-2";
+import { Chart as ChartJS,LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement } from "chart.js"
+import { Line, Pie } from "react-chartjs-2";
 
 ChartJS.register(
     LineElement,
+    ArcElement,
     PointElement,
     CategoryScale,
     LinearScale,
@@ -10,26 +11,48 @@ ChartJS.register(
     Legend,
 );
 
-const LineChart = () => {
+export const LineChart = () => {
     const data = {
-        labels: ['Monday' , 'Tuesday' , 'Wednesday' , 'Thursday', 'Friday', 'Saturday' ],
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         datasets: [{
             label: 'Customers',
-            data: [30, 33, 60,22,58,22],
+            data: [30, 33, 60, 22, 58, 22],
             borderColor: 'red',
             backgroundColor: 'blue',
             tension: 0.4
         }]
     }
-    const options = {
-
-    }
+    const options = {}
     return (
         <>
-            <div  className="customerVisit">
+            <div className="customerVisit">
                 <Line data={data} options={options}></Line>
             </div>
         </>
     )
 }
-export default LineChart;
+export const CustomersDevices = () => {
+    const data = {
+        labels: ['Tablet', 'Desktop', 'Mobile'],
+        datasets: [{
+            data: [2.5,79.2,17.3],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+              ],
+              hoverOffset: 4
+        }],   
+    }
+    const options = {
+        type: 'pie',
+        data: data,
+    }
+    return (
+        <>
+            <div className="customersDevices">
+                <Pie data={data} options={options}></Pie>
+            </div>
+        </>
+    )
+}

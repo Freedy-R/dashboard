@@ -26,16 +26,6 @@
   font-size: 1.3rem;
 }
 
-.btnBack {
-  width: 32px;
-  height: 32px;
-  margin: 3px;
-  border-radius: 80%;
-  color: black;
-  background-color: var(--bgSectionButton_colour);
-  border: none;
-}
-
 .dashboard_sections_view {
   position: relative;
   display: grid;
@@ -54,6 +44,10 @@
   grid-template-columns: 100%;
   grid-template-rows: min-content 1fr 1fr;
 }
+.dashboard_sections_view--right {
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr;
+}
 .dashboard_sections_view--element {
   position: relative;
   background-color: white;
@@ -61,6 +55,7 @@
   padding: 1rem;
 }
 
+/* Customers chart section */
 .dashboard_sections_view--left > .dashboard_sections_view--element:first-child {
   display: grid;
   background-color: white;
@@ -78,6 +73,8 @@
   padding: 5px;
   margin-left: auto;
 }
+
+/* customerVisit chart style */
 .customerVisit {
   position: relative;
   grid-column: 1/-1;
@@ -91,6 +88,8 @@
   height: fit-content;
   gap: 10px;
 }
+
+/* Employers table */
 .customers_table > figure {
   position: relative;
   display: grid;
