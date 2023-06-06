@@ -1,7 +1,19 @@
-import {LineChart,CustomersDevices} from "./AllCharts";
+import { LineChart, CustomersDevices } from "./AllCharts";
 import profile from "../../assets/rating.png"
-
+import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { GreenDelightsData } from "../../firebase-config"
 const SectionsView = () => {
+    const [employers, setEmployers] = useState([])
+    const employersCollectionRef = collection(GreenDelightsData, "employers")
+    useEffect(() => {
+        const getEmployers = async () => {
+            const data = await getDocs(employersCollectionRef)
+            setEmployers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        }
+        getEmployers()
+    }, [])
+
     return (
         <>
             <section className="dashboard_sections_view">
@@ -25,14 +37,20 @@ const SectionsView = () => {
                             <p><b>Remaining Item</b></p>
                             <p><b>Hire Date</b></p>
                             {/* dynamically added to table */}
-                            <figure>
-                                <img src={[profile]} alt="profile"></img>
-                                <figcaption>John</figcaption>
-                            </figure>    
-                            <p>Manager</p>
-                            <p>100K</p>
-                            <p>10K</p>
-                            <p>10.05.2022</p>
+                            {employers.map((employer) => {
+                                return (
+                                    <>
+                                        <figure>
+                                            <img src={[profile]} alt="profile"></img>
+                                            <figcaption>{employer.name}</figcaption>
+                                        </figure>
+                                        <p>{employer.position}</p>
+                                        <p>{employer.total_sale}</p>
+                                        <p>{employer.remaining_item}</p>
+                                        <p>{employer.hire_date}</p>
+                                    </>
+                                )
+                            })}
                         </div>
                     </div>
                     <div className="dashboard_sections_view--element"></div>
